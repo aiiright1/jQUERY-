@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="jquery-3.0.0.js"></script>
+		<script src="jquery.raty.js"></script>
+	</head>
+	<body>
+		<div id="star">
+		 </div>
+		 <div id="result">
+		 	
+		 </div>
+		 <script>
+
+          //第一种方式
+		 	$(function(){
+		 		$("#star").raty({
+		 			hints:["1","2","3","4","5"],
+		 			path:"style/img",
+		 			size:100,
+		 			starOff:"star-off-big.png",
+                    starOn:"star-on-big.png",
+                    
+                    click:function(score,evt){
+                 	alert('u selected'+score);
+                  }
+             
+		 		});
+		 		//            $('#star').raty({
+//          	size:100,
+//            iconRange: [
+//               { range: 2, on: 'face-a.png', off: 'face-a-off.png' },
+//               { range: 3, on: 'face-b.png', off: 'face-b-off.png' },
+//               { range: 4, on: 'face-c.png', off: 'face-c-off.png' },
+//               { range: 5, on: 'face-d.png', off: 'face-d-off.png' }
+//             ]
+//         });
+		 	});
+		 	//第二种方式
+//       $(function(){
+//       	$("#result").hide();
+//          $("#star").raty({
+//		 			hints:["1","2","3","4","5"],//更换评分等级文本
+//		 			path:"style/img",//更换图片地址
+//		 			 starOff:"medal-off.png",//鼠标移入的图片
+//		 			
+//                   starOn:"medal-on.png",//鼠标原本图片
+//                  
+//                   size:100,//放星星的div宽度
+//                   target:"#result",//存放用户评分值
+//                   targetKeep:true
+//                   
+//		 		});
+//		 		
+//		 	
+//		 	
+//		 	$("img").click(function(){
+//		 		var a=$("#result").html();
+//		 		if($("#resule").text() != a){
+//		 			alert("您的评分为："+$("#result").text()+"分");
+//		 			return;
+//		 		}
+//		 	});
+//       });
+		 </script>
+	</body>
+</html>
